@@ -15,3 +15,7 @@ def sorted_values(hash)
   my_hash = hash.values.sort
   print my_hash
 end
+
+def swap_key_and_value(hash)
+  hash.invert
+end
