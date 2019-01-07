@@ -4,15 +4,10 @@ def add_one(hash)
 end
 
 def sort_value(hash)
-  keys = []
-  values = []
-  hash.each do |k, v|
-    keys << k
-    values << v
-  end
-  keys.sort!
-  values.sort!
-  print keys.zip(values).to_h
+  keys, values = [], []
+  hash.each_key.sort.each { |k|  keys << k }
+  hash.each_value.sort.each { |v|  values << v }
+  keys.zip(values).to_h
 end
 
 def sorted_values(hash)
